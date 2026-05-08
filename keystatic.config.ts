@@ -1,6 +1,6 @@
 import { config, collection, singleton, fields } from "@keystatic/core";
 
-const isGitHub = process.env.KEYSTATIC_STORAGE_KIND === "github";
+const isGitHub = !!process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG;
 
 export default config({
   storage: isGitHub

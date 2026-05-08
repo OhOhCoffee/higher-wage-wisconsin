@@ -13,3 +13,6 @@ services:
       - /app/.next          # keep build cache inside the container
     environment:
       - NODE_ENV=development
+      - KEYSTATIC_STORAGE_KIND=github
+      - KEYSTATIC_GITHUB_REPO_OWNER=OhOhCoffee
+      - KEYSTATIC_GITHUB_REPO_NAME=higher-wage-wisconsin
