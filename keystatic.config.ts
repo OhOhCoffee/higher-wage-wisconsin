@@ -6,7 +6,7 @@ export default config({
   storage: isGitHub
     ? {
         kind: "github",
-        repo: `${process.env.KEYSTATIC_GITHUB_REPO_OWNER}/${process.env.KEYSTATIC_GITHUB_REPO_NAME}` as `${string}/${string}`,
+        repo: "OhOhCoffee/higher-wage-wisconsin",
       }
     : { kind: "local" },
 
