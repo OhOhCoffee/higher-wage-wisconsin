@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      target: deps          # only install deps — don't run a full prod build
+    image: higher-wage-wisconsin-dev
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app              # live-reload: local files mount into the container
+      - /app/node_modules   # keep container's node_modules, don't overwrite with host
+      - /app/.next          # keep build cache inside the container
+    environment:
+      - NODE_ENV=development
