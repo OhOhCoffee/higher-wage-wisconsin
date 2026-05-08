@@ -1,40 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import clsx from "clsx";
+import { sendJoinEmail } from "@/app/actions/sendJoinEmail";
+
+const inputClass =
+  "w-full border border-neutral-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 bg-white";
+const labelClass =
+  "block text-xs font-semibold uppercase tracking-wide text-neutral-500 mb-1";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="self-start bg-neutral-900 text-white text-sm font-semibold px-8 py-3 rounded hover:bg-neutral-700 transition-colors disabled:opacity-50"
+    >
+      {pending ? "Sending…" : "Submit"}
+    </button>
+  );
+}
 
 export default function JoinForm() {
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    newsletter: false,
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction] = useActionState(sendJoinEmail, {});
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    const target = e.target as HTMLInputElement;
-    setForm((prev) => ({
-      ...prev,
-      [target.name]: target.type === "checkbox" ? target.checked : target.value,
-    }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    // TODO: wire up to a form backend (e.g. Resend, Formspree, or a Next.js API route)
-    console.log("Form submitted:", form);
-    setSubmitted(true);
-  }
-
-  const inputClass =
-    "w-full border border-neutral-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 bg-white";
-  const labelClass = "block text-xs font-semibold uppercase tracking-wide text-neutral-500 mb-1";
-
-  if (submitted) {
+  if (state.success) {
     return (
       <div className="py-8 text-center">
         <p className="text-lg font-semibold">Thanks! We&apos;ll be in touch.</p>
@@ -43,7 +35,7 @@ export default function JoinForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form action={formAction} className="flex flex-col gap-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className={labelClass} htmlFor="firstName">
@@ -54,8 +46,6 @@ export default function JoinForm() {
             name="firstName"
             type="text"
             required
-            value={form.firstName}
-            onChange={handleChange}
             className={inputClass}
           />
         </div>
@@ -68,8 +58,6 @@ export default function JoinForm() {
             name="lastName"
             type="text"
             required
-            value={form.lastName}
-            onChange={handleChange}
             className={inputClass}
           />
         </div>
@@ -84,8 +72,6 @@ export default function JoinForm() {
           name="email"
           type="email"
           required
-          value={form.email}
-          onChange={handleChange}
           className={inputClass}
         />
       </div>
@@ -94,8 +80,6 @@ export default function JoinForm() {
         <input
           name="newsletter"
           type="checkbox"
-          checked={form.newsletter}
-          onChange={handleChange}
           className="w-4 h-4 accent-neutral-800"
         />
         Sign up for news and updates
@@ -110,18 +94,15 @@ export default function JoinForm() {
           name="message"
           required
           rows={5}
-          value={form.message}
-          onChange={handleChange}
           className={clsx(inputClass, "resize-none")}
         />
       </div>
 
-      <button
-        type="submit"
-        className="self-start bg-neutral-900 text-white text-sm font-semibold px-8 py-3 rounded hover:bg-neutral-700 transition-colors"
-      >
-        Submit
-      </button>
+      {state.error && (
+        <p className="text-sm text-red-600">{state.error}</p>
+      )}
+
+      <SubmitButton />
     </form>
   );
 }
