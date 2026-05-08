@@ -20,8 +20,8 @@ export async function sendJoinEmail(
     return { error: "Please fill in all required fields." };
   }
 
-  const { error } = await resend.emails.send({
-    from: "Higher Wage Wisconsin <noreply@higher-wage-wisconsin.vercel.app>",
+  const { data, error } = await resend.emails.send({
+    from: "Higher Wage Wisconsin <noreply@higherwagewisconsin.org>",
     to: process.env.CONTACT_EMAIL!,
     subject: `New join request from ${firstName} ${lastName}`,
     text: [
@@ -34,6 +34,7 @@ export async function sendJoinEmail(
   });
 
   if (error) {
+    console.error("Resend error:", error);
     return { error: "Failed to send. Please try again." };
   }
 
