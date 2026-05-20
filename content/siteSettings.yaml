@@ -1,0 +1,23 @@
+siteName: Higher Wage Wisconsin
+tagline: ''
+primaryColor: '#171717'
+accentColor: '#737373'
+navLinks:
+  - label: Home
+    href: /
+    external: false
+  - label: Higher Wage Wisconsin
+    href: /#higher-wage
+    external: false
+  - label: Contact
+    href: /#contact
+    external: false
+footerText: ''
+socialLinks: []
+businessGridColumns: '2'
+businessPlaceholderText: Business Logo
+showGoalsSection: true
+showHowItWorksSection: true
+siteDescription: >-
+  Highlighting Wisconsin businesses that voluntarily pay their employees above
+  the minimum wage.
