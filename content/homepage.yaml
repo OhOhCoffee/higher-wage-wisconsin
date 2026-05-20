@@ -1,19 +1,3 @@
-businesses:
-  - name: Oh Oh Coffee
-    website: 'https://www.OhOhcoffee.com'
-    logo: /images/businesses/oh-oh-coffee/logo.png
-  - name: Pearl Street Books
-    website: 'https://www.pearlstbooks.com/'
-    logo: /images/businesses/pearl-street-books/logo.webp
-  - name: Ethos Green Power Cooperative
-    website: 'https://www.ethos.green/about'
-    logo: /images/businesses/ethos-green-power-cooperative/logo.webp
-  - name: Plenty Popcorn Viroqua
-    website: 'https://www.facebook.com/people/Plenty-Viroqua/61561428260006/#'
-    logo: /images/businesses/plenty-popcorn-viroqua/logo.png
-  - name: Kroner's Hardware
-    website: 'https://www.facebook.com/KronersHardware/'
-    logo: /images/businesses/kroner-s-hardware/logo.png
 heroHeading: Higher Wage Wisconsin
 heroParagraph: >-
   Minimum wage in Wisconsin is $7.25 per hour and has not changed in 17 years!
@@ -22,6 +6,22 @@ heroParagraph: >-
   our communities and our businesses, and that that time should be compensated
   to meet the needs of the community.
 optInStatement: We opt in to a higher minimum wage.
+businesses:
+  - name: Oh Oh Coffee
+    website: https://www.OhOhcoffee.com
+    logo: /images/businesses/businesses/0/logo.png
+  - name: Pearl Street Books
+    website: https://www.pearlstbooks.com/
+    logo: /images/businesses/businesses/1/logo.webp
+  - name: Kroner's Hardware
+    website: https://www.facebook.com/KronersHardware/
+    logo: /images/businesses/businesses/2/logo.png
+  - name: Ethos Green Power Cooperative
+    website: https://www.ethos.green/about
+    logo: /images/businesses/businesses/3/logo.webp
+  - name: Plenty Popcorn Viroqua
+    website: https://www.facebook.com/people/Plenty-Viroqua/61561428260006/#
+    logo: /images/businesses/businesses/4/logo.png
 lookingHeading: Looking for more businesses!
 lookingBody: >-
   Know anyone that has a starting hourly pay for their employees over $15 per
