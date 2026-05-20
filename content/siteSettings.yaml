@@ -1,6 +1,5 @@
 siteName: Higher Wage Wisconsin
-tagline: ''
-primaryColor: '#171717'
+primaryColor: '#71C0A7'
 accentColor: '#737373'
 navLinks:
   - label: Home
@@ -12,7 +11,6 @@ navLinks:
   - label: Contact
     href: /#contact
     external: false
-footerText: ''
 socialLinks: []
 businessGridColumns: '2'
 businessPlaceholderText: Business Logo
