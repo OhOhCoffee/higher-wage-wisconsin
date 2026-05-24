@@ -7,24 +7,27 @@ heroParagraph: >-
   to meet the needs of the community.
 optInStatement: We opt in to a higher minimum wage.
 businesses:
+  - name: 'Higher Wage Wisconsin '
+    website: https://www.higherwagewisconsin.org
+    logo: /images/businesses/businesses/0/logo.png
   - name: Oh Oh Coffee
     website: https://www.OhOhcoffee.com
-    logo: /images/businesses/businesses/0/logo.png
+    logo: /images/businesses/businesses/1/logo.png
   - name: Pearl Street Books
     website: https://www.pearlstbooks.com/
-    logo: /images/businesses/businesses/1/logo.webp
+    logo: /images/businesses/businesses/2/logo.webp
   - name: Kroner's Hardware
     website: https://www.kronershardware.com
-    logo: /images/businesses/businesses/2/logo.png
+    logo: /images/businesses/businesses/3/logo.png
   - name: Ethos Green Power Cooperative
     website: https://www.ethos.green/about
-    logo: /images/businesses/businesses/3/logo.webp
+    logo: /images/businesses/businesses/4/logo.webp
   - name: Plenty Popcorn Viroqua
     website: https://www.facebook.com/people/Plenty-Viroqua/61561428260006/#
-    logo: /images/businesses/businesses/4/logo.png
+    logo: /images/businesses/businesses/5/logo.png
   - name: Coulee Junk Removal
     website: https://www.couleejunkremoval.com/
-    logo: /images/businesses/businesses/5/logo.webp
+    logo: /images/businesses/businesses/6/logo.webp
 lookingHeading: Looking for more businesses!
 lookingBody: >-
   Know anyone that has a starting hourly pay for their employees over $15 per
