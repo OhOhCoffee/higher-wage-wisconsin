@@ -1,4 +1,6 @@
 siteName: Higher Wage Wisconsin
+siteLogo: /images/site/siteLogo.png
+favicon: /images/site/favicon.png
 primaryColor: '#71C0A7'
 accentColor: '#737373'
 navLinks:
