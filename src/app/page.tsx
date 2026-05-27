@@ -111,7 +111,7 @@ export default async function Home() {
                       key={i}
                       className="flex gap-3 text-neutral-700 text-base leading-relaxed"
                     >
-                      <span className="mt-2 flex-shrink-0 w-2 h-2 rounded-full bg-neutral-800" />
+                      <span className="mt-2 flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
                       {goal.text}
                     </li>
                   ))}
