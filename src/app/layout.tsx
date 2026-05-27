@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { cache } from "react";
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../../keystatic.config";
+import { themes, defaultTheme } from "@/lib/themes";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,9 +32,11 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const s = await getSettings();
 
+  const themeKey = (s?.theme ?? defaultTheme) as keyof typeof themes;
+  const theme = themes[themeKey] ?? themes[defaultTheme];
+
   const cssVars = {
-    "--primary-color": s?.primaryColor ?? "#171717",
-    "--accent-color": s?.accentColor ?? "#737373",
+    "--primary-color": theme.primary,
   } as React.CSSProperties;
 
   return (
@@ -45,6 +48,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Navbar
           siteName={s?.siteName ?? "Higher Wage Wisconsin"}
+          tagline={s?.tagline ?? null}
           siteLogo={s?.siteLogo ?? null}
           navLinks={s?.navLinks ?? []}
         />

@@ -8,11 +8,12 @@ type NavLink = { label: string; href: string; external?: boolean };
 
 type NavbarProps = {
   siteName: string;
+  tagline?: string | null;
   siteLogo?: string | null;
   navLinks: ReadonlyArray<NavLink>;
 };
 
-export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
+export default function Navbar({ siteName, tagline, siteLogo, navLinks }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -34,6 +35,9 @@ export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
             </div>
           )}
           <span className="text-xl font-bold tracking-tight">{siteName}</span>
+          {tagline && (
+            <span className="hidden sm:block text-xs text-neutral-500">{tagline}</span>
+          )}
         </Link>
 
         {/* Desktop nav */}
@@ -46,7 +50,7 @@ export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-neutral-900 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   {link.label}
                 </a>
@@ -54,7 +58,7 @@ export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="hover:text-neutral-900 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -88,7 +92,7 @@ export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="hover:text-neutral-900 transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
@@ -97,7 +101,7 @@ export default function Navbar({ siteName, siteLogo, navLinks }: NavbarProps) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="hover:text-neutral-900 transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>

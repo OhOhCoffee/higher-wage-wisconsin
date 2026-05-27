@@ -1,4 +1,5 @@
 import { config, singleton, fields } from "@keystatic/core";
+import { themes, defaultTheme } from "./src/lib/themes";
 
 const isGitHub = !!process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG;
 
@@ -44,15 +45,11 @@ export default config({
           directory: "public/images/site",
           publicPath: "/images/site/",
         }),
-        primaryColor: fields.text({
-          label: "Primary Color",
-          defaultValue: "#171717",
-          description: "Hex color used for buttons and primary accents (e.g. #2563eb).",
-        }),
-        accentColor: fields.text({
-          label: "Accent Color",
-          defaultValue: "#737373",
-          description: "Hex color used for secondary text and subtle elements.",
+        theme: fields.select({
+          label: "Color Theme",
+          description: "Controls button color, link hovers, and other accents across the site.",
+          options: Object.entries(themes).map(([value, { label }]) => ({ label, value })),
+          defaultValue: defaultTheme,
         }),
 
         // ── Navigation ────────────────────────────────────────────────────

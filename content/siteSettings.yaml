@@ -2,8 +2,7 @@ siteName: Higher Wage Wisconsin
 tagline: Showcasing businesses who are opting into a higher minimum wage.
 siteLogo: /images/site/siteLogo.png
 favicon: /images/site/favicon.png
-primaryColor: '#71C0A7'
-accentColor: '#737373'
+theme: forest
 navLinks:
   - label: Home
     href: /

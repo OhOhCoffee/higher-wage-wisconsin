@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { sendJoinEmail } from "@/app/actions/sendJoinEmail";
 
 const inputClass =
-  "w-full border border-neutral-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-400 bg-white";
+  "w-full border border-neutral-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-white";
 const labelClass =
   "block text-xs font-semibold uppercase tracking-wide text-neutral-500 mb-1";
 

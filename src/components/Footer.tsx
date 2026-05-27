@@ -49,7 +49,7 @@ export default function Footer({
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-neutral-600 transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 {platformLabel[link.platform] ?? link.platform}
               </a>
