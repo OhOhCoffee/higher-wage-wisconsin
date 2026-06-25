@@ -4,6 +4,9 @@ businesses:
   - name: Pump House Regional Arts Center
     website: https://www.thepumphouse.org/
     logo: /images/businesses/businesses/0/logo.png
+  - name: Kroner's Hardware
+    website: https://www.kronershardware.com/
+    logo: /images/businesses/businesses/1/logo.png
 lookingHeading: Looking for more businesses!
 goalsHeading: 'Goals of the group:'
 goals: []
