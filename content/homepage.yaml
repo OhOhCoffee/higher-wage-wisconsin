@@ -22,15 +22,18 @@ businesses:
   - name: Ethos Green Power Cooperative
     website: https://www.ethos.green/about
     logo: /images/businesses/businesses/4/logo.webp
-  - name: Plenty Popcorn Viroqua
-    website: https://www.facebook.com/people/Plenty-Viroqua/61561428260006/#
-    logo: /images/businesses/businesses/5/logo.png
   - name: Coulee Junk Removal
     website: https://www.couleejunkremoval.com/
-    logo: /images/businesses/businesses/6/logo.webp
+    logo: /images/businesses/businesses/5/logo.webp
   - name: Pump House Regional Arts Center
     website: https://www.thepumphouse.org/
+    logo: /images/businesses/businesses/6/logo.png
+  - name: Flatiron Cafe & Bar
+    website: https://www.flatironlax.com/
     logo: /images/businesses/businesses/7/logo.png
+  - name: Plenty Popcorn Viroqua
+    website: https://www.facebook.com/people/Plenty-Viroqua/61561428260006/#
+    logo: /images/businesses/businesses/8/logo.png
 lookingHeading: Looking for more businesses!
 lookingBody: >-
   Know anyone that has a starting hourly pay for their employees over $15 per
